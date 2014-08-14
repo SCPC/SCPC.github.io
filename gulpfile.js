@@ -45,8 +45,8 @@ gulp.task('clean', function(cb) {
   del([DIST],cb);
 });
 
-gulp.task('build',function(){
-  runSequence(['clean','css','js','images','html'])});
+gulp.task('build',['clean'],function(){
+  runSequence(['css','js','images','html'])});
 
 
 // Watch Files For Changes & Reload
