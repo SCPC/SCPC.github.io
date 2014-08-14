@@ -36,7 +36,7 @@ gulp.task('images', function () {
 
 gulp.task('html', function () {
   return gulp.src(SRC+'/**/*.html')
-    .pipe($.minify-html())
+    //.pipe($.minify-html({}))
     .pipe(gulp.dest(DIST))
     .pipe($.size({title: 'html'}));
 });
@@ -46,7 +46,7 @@ gulp.task('clean', function(cb) {
 });
 
 gulp.task('build',function(){
-  runSequence(['clean','css','js','images'])});
+  runSequence(['clean','css','js','images','html'])});
 
 
 // Watch Files For Changes & Reload
