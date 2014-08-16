@@ -33,6 +33,11 @@ gulp.task('images', function () {
     .pipe(gulp.dest(DIST+'/images'))
     .pipe($.size({title: 'images'}));
 });
+gulp.task('lib', function () {
+  return gulp.src([SRC+'/lib/**'])
+    .pipe(gulp.dest(DIST+'/lib'))
+    .pipe($.size({title: 'lib'}));
+});
 
 gulp.task('html', function () {
   return gulp.src(SRC+'/**/*.html')
