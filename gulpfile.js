@@ -51,7 +51,7 @@ gulp.task('clean', function(cb) {
 });
 
 gulp.task('build',['clean'],function(){
-  runSequence(['css','js','images','html'])});
+  runSequence(['lib','css','js','images','html'])});
 
 
 // Watch Files For Changes & Reload
