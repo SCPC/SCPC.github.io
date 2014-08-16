@@ -33,6 +33,11 @@ gulp.task('images', function () {
     .pipe(gulp.dest(DIST+'/images'))
     .pipe($.size({title: 'images'}));
 });
+gulp.task('lib', function () {
+  return gulp.src([SRC+'/lib/**'])
+    .pipe(gulp.dest(DIST+'/lib'))
+    .pipe($.size({title: 'lib'}));
+});
 
 gulp.task('html', function () {
   return gulp.src(SRC+'/**/*.html')
@@ -46,7 +51,7 @@ gulp.task('clean', function(cb) {
 });
 
 gulp.task('build',['clean'],function(){
-  runSequence(['css','js','images','html'])});
+  runSequence(['lib','css','js','images','html'])});
 
 
 // Watch Files For Changes & Reload
