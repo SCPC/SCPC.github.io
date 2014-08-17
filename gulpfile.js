@@ -12,23 +12,28 @@ var DIST='dist';
 
 
 gulp.task('js', function () {
-  return gulp.src(SRC+'/scripts/**/*.js')
+  return gulp.src(SRC+'/js/**/*.js')
+    .pipe($.cached('js',['optimizeMemory']))
     .pipe($.uglify())
-    .pipe(gulp.dest(DIST+'/scripts'))
+    .pipe(gulp.dest(DIST+'/js'))
     .pipe($.size({title: 'js'}));
 });
 gulp.task('css', function () {
-    return gulp.src(SRC+'/css/**/*.css')
-      .pipe($.csso())
-      .pipe(gulp.dest(DIST+'/css'))
+  return gulp.src(SRC+'/css/**/*.css')
+    .pipe($.cached('css',['optimizeMemory']))
+    .pipe($.csso())
+    .pipe(gulp.dest(DIST+'/css'))
+    .pipe($.size({title: 'css'}));
 });
 gulp.task('fonts', function () {
   return gulp.src([SRC+'/fonts/**'])
+    .pipe($.cached('fonts',['optimizeMemory']))
     .pipe(gulp.dest(DIST+'/fonts'))
     .pipe($.size({title: 'fonts'}));
 });
 gulp.task('images', function () {
   return gulp.src(SRC+'/images/**/*')
+    .pipe($.cached('images',['optimizeMemory']))
     .pipe($.imagemin())
     .pipe(gulp.dest(DIST+'/images'))
     .pipe($.size({title: 'images'}));
@@ -38,41 +43,43 @@ gulp.task('lib', function () {
     .pipe(gulp.dest(DIST+'/lib'))
     .pipe($.size({title: 'lib'}));
 });
-
-gulp.task('html', function () {
-  return gulp.src(SRC+'/**/*.html')
-    //.pipe($.minify-html({}))
-    .pipe(gulp.dest(DIST))
-    .pipe($.size({title: 'html'}));
+gulp.task('jade', function () {
+  return gulp.src([SRC+'/**/*.jade'])
+    .pipe($.cached('jade',['optimizeMemory']))
+    .pipe($.jade())
+    .pipe(gulp.dest(DIST));
+});
+gulp.task('jade:all', function () {
+  delete $.cached.caches['jade'];
+  return gulp.src([SRC+'/**/*.jade'])
+    .pipe($.cached('jade',['optimizeMemory']))
+    .pipe($.jade())
+    .pipe(gulp.dest(DIST));
 });
 
 gulp.task('clean', function(cb) {
   del([DIST],cb);
+  $.cached.caches={}
 });
 
-gulp.task('build',['clean'],function(){
-  runSequence(['lib','css','js','images','html'])});
+gulp.task('build',function(){
+  runSequence(['js','css','fonts','images','lib','jade'])});
 
 
 // Watch Files For Changes & Reload
-gulp.task('serve', function () {
-  browserSync({
-    notify: false,
-    server: {
-      baseDir: [SRC]
-    }
-  });
-
-  gulp.watch([SRC+'/**'], reload);
-});
-
 // Build and serve the output from the dist build
-gulp.task('serve:dist', ['build'], function () {
+gulp.task('serve', ['build'], function () {
   browserSync({
     notify: false,
     server: {
       baseDir: [DIST]
     }
   });
-  gulp.watch([DIST+'/**'], reload);
+  gulp.watch([SRC+'/js'], ['js',reload]);
+  gulp.watch([SRC+'/css'], ['css',reload]);
+  gulp.watch([SRC+'/fonts'], ['fonts',reload]);
+  gulp.watch([SRC+'/images'], ['images',reload]);
+  gulp.watch([SRC+'/lib'], ['lib',reload]);
+  gulp.watch([SRC+'/jade'], ['jade:all',reload]);
+  gulp.watch([SRC+'/**/*.jade'], ['jade',reload]);
 });
