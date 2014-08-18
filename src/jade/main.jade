@@ -9,7 +9,8 @@ html(lang='en')
       title #{json.fullname}
     link(rel='icon', href='images/logo_16x16.jpg')
     // Bootstrap
-    link(href='lib/bootstrap/css/bootstrap.min.css', rel='stylesheet')
+    // link(rel='stylesheet', href='/dist/lib/bootstrap/css/bootstrap.min.css')
+    link(rel='stylesheet', href='//maxcdn.bootstrapcdn.com/bootswatch/3.2.0/darkly/bootstrap.min.css')
     link(rel='stylesheet', href='css/main.css')
     link(rel='stylesheet', href='lib/highlightjs/github.min.css')
   body
@@ -23,7 +24,7 @@ html(lang='en')
             span.icon-bar
           a.navbar-brand(href='/dist/index.html')
             img(src='images/logo.png', style='height:1em;')
-            | #{json.fullname}
+            | #{json.name}
         .navbar-collapse.collapse
           ul.nav.navbar-nav
             li
@@ -31,7 +32,7 @@ html(lang='en')
             li
               a(href='#news') News
             li
-              a(href='#links') Schedule
+              a(href='/dist/schedule.html') Schedule
             li.dropdown
               a.dropdown-toggle(href='#',data-toggle="dropdown")
                 | Get involved
