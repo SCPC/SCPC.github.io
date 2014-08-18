@@ -90,7 +90,7 @@ gulp.task('serve', ['build'], function () {
   browserSync({
     notify: false,
     server: {
-      baseDir: [DIST]
+      baseDir: ['./']
     }
   });
   gulp.watch([SRC+'/js/**/*.js'], ['js',reload]);
