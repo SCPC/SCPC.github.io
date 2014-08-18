@@ -11,7 +11,33 @@ block content
   hr.featurette-divider
   #news
     h1 News
-    p
+    ul(style='list-style-type:square')
+      li
+        p.lead we can use markdown with syntax highlighting now:
+        :markdown
+          **markdown:**
+          <pre><code class="no-highlight">*hello world!*
+          ```c++
+            int main(){
+              int a=10;
+              printf("hello %d!\n",a+3);
+              return 0;
+            }
+          ```
+          </code></pre>
+
+          **result:**
+
+          *hello world!*
+          ```c
+            int main(){
+              int a=10;
+              printf("hello %d!\n",a+3);
+              return 0;
+            }
+          ```
+      li
+        p.lead official website is now online.
   hr.featurette-divider
   #links
     h1 Useful Links:
@@ -27,9 +53,9 @@ block content
   #involve
     h1 Get Involved
     p.lead
-      | We use github for most of our Activities. So please Sign up for an account at 
+      | We use github for most of our activities. So please sign up for an account at 
       a(href='//www.github.com') Github
-      |  first. Thenmake sure that your SLU email in shown some where in your profile
+      |  first. Then make sure that your SLU email in shown somewhere in your profile.
     p.lead There are several way to get involved:
     ul(style='list-style-type:square')
       li

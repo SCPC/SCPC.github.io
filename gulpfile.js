@@ -6,10 +6,16 @@ var $ = require('gulp-load-plugins')();
 var del = require('del');
 var runSequence = require('run-sequence');
 var browserSync = require('browser-sync');
+var marked = require('marked');
 var reload = browserSync.reload;
 var SRC='src';
 var DIST='dist';
 var jade_json_name='json';
+marked.setOptions({
+  highlight: function (code) {
+    return require('highlight.js').highlightAuto(code).value;
+  }
+});
 
 
 gulp.task('js', function () {
@@ -87,11 +93,11 @@ gulp.task('serve', ['build'], function () {
       baseDir: [DIST]
     }
   });
-  gulp.watch([SRC+'/js'], ['js',reload]);
-  gulp.watch([SRC+'/css'], ['css',reload]);
-  gulp.watch([SRC+'/fonts'], ['fonts',reload]);
-  gulp.watch([SRC+'/images'], ['images',reload]);
-  gulp.watch([SRC+'/lib'], ['lib',reload]);
+  gulp.watch([SRC+'/js/**/*.js'], ['js',reload]);
+  gulp.watch([SRC+'/css/**'], ['css',reload]);
+  gulp.watch([SRC+'/fonts/**'], ['fonts',reload]);
+  gulp.watch([SRC+'/images/**'], ['images',reload]);
+  gulp.watch([SRC+'/lib/**'], ['lib',reload]);
   gulp.watch([SRC+'/jade_json/**/*.json'], ['jade_json','jade',reload]);
   gulp.watch([SRC+'/jade/**/*.jade'], ['jade_pre','jade',reload]);
   gulp.watch([SRC+'/**/*.jade'], ['jade',reload]);
