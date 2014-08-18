@@ -9,6 +9,7 @@
     <!-- Bootstrap-->
     <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="lib/highlightjs/github.min.css">
   </head>
   <body>
     <div role="navigation" class="navbar navbar-inverse navbar-static-top">
@@ -42,7 +43,33 @@
       <hr class="featurette-divider">
       <div id="news">
         <h1>News</h1>
-        <p></p>
+        <ul style="list-style-type:square">
+          <li>
+            <p class="lead">we can use markdown with syntax highlighting now:</p><p><strong>markdown:</strong></p>
+<pre><code class="no-highlight">*hello world!*
+```c++
+  int main(){
+    int a=10;
+    printf("hello %d!\n",a+3);
+    return 0;
+  }
+```
+</code></pre>
+
+<p><strong>result:</strong></p>
+<p><em>hello world!</em></p>
+<pre><code class="lang-c">  <span class="hljs-keyword">int</span> main(){
+    <span class="hljs-keyword">int</span> a=<span class="hljs-number">10</span>;
+    <span class="hljs-keyword">printf</span>(<span class="hljs-string">"hello <span class="hljs-variable">%d</span>!\n"</span>,a+<span class="hljs-number">3</span>);
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+  }
+</code></pre>
+
+          </li>
+          <li>
+            <p class="lead">official website is now online.</p>
+          </li>
+        </ul>
       </div>
       <hr class="featurette-divider">
       <div id="links">
@@ -53,7 +80,7 @@
       </div>
       <div id="involve">
         <h1>Get Involved</h1>
-        <p class="lead">We use github for most of our Activities. So please Sign up for an account at <a href="//www.github.com">Github</a> first. Thenmake sure that your SLU email in shown some where in your profile</p>
+        <p class="lead">We use github for most of our activities. So please sign up for an account at <a href="//www.github.com">Github</a> first. Then make sure that your SLU email in shown somewhere in your profile.</p>
         <p class="lead">There are several way to get involved:</p>
         <ul style="list-style-type:square">
           <li>Apply to give a talk, See <a href="/dist/give_a_talk.html">guide</a>.</li>
