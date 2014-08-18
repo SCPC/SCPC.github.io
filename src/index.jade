@@ -1,0 +1,42 @@
+extends jade/main.jade
+
+block title
+  title #{json.fullname}
+
+block content
+  #home
+    h1 Hello, coders!
+    p
+      | Welcome to SLU Computer Programming Club! This is a club where everything is about coding. We have weekly meeting on 7:00 PM Tuesday in Linex Lab (Room 121L) in Ritter Hall. During the meeting, we will blah blah blah...
+  hr.featurette-divider
+  #news
+    h1 News
+    p
+  hr.featurette-divider
+  #links
+    h1 Useful Links:
+    p
+      | Advisor: 
+      a(href='http://mathcs.slu.edu/~goldwasser') Dr. Michael Goldwasser
+    p
+      | Discuss Coding: 
+      a(href='https://github.com/scpc/problem_archive/issues') github issues
+    p
+      | online judge: 
+      a(href='https://icpcarchive.ecs.baylor.edu/index.php') AMC-ICPC Online Archive
+  #involve
+    h1 Get Involved
+    p.lead
+      | We use github for most of our Activities. So please Sign up for an account at 
+      a(href='//www.github.com') Github
+      |  first. Thenmake sure that your SLU email in shown some where in your profile
+    p.lead There are several way to get involved:
+    ul(style='list-style-type:square')
+      li
+        | Apply to give a talk, See 
+        a(href='/dist/give_a_talk.html') guide
+        | .
+      li
+        | Use our github repos. See
+        a(href='/dist/contribute_to_github.html') guide
+        | .

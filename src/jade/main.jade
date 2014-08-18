@@ -1,0 +1,51 @@
+include ../jade_json/global.json.jade
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    block title
+      title #{json.fullname}
+    link(rel='icon', href='images/logo_16x16.jpg')
+    // Bootstrap
+    link(href='lib/bootstrap/css/bootstrap.min.css', rel='stylesheet')
+    link(rel='stylesheet', href='css/main.css')
+  body
+    .navbar.navbar-inverse.navbar-static-top(role='navigation')
+      .container-fluid
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='/dist/index.html')
+            img(src='images/logo.png', style='height:1em;')
+            | #{json.fullname}
+        .navbar-collapse.collapse
+          ul.nav.navbar-nav
+            li
+              a(href='#home') Home
+            li
+              a(href='#news') News
+            li
+              a(href='#links') Schedule
+            li.dropdown
+              a.dropdown-toggle(href='#',data-toggle="dropdown")
+                | Get involved
+                span.caret
+              ul.dropdown-menu(role='menu')
+                li
+                  a(href='/dist/give_a_talk.html') give a talk
+                li
+                  a(href='/dist/contribute_to_github.html') use our github
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href='https://github.com/scpc/SCPC.github.io') View on Github
+    .container
+      block content
+    // jQuery (necessary for Bootstrap's JavaScript plugins)
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
+    // Include all compiled plugins (below), or include individual files as needed
+    script(src='lib/bootstrap/js/bootstrap.min.js')
