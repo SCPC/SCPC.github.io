@@ -45,7 +45,7 @@ gulp.task('lib', function () {
     .pipe($.size({title: 'lib'}));
 });
 gulp.task('jade_json', function () {
-  delete $.cached.caches['jade'];
+  $.cached.caches['jade']={};
   return gulp.src(SRC+'/jade_json/**/*.json')
     .pipe($.cached('jade_json',['optimizeMemory']))
     .pipe($.jsonminify())
@@ -55,7 +55,7 @@ gulp.task('jade_json', function () {
     .pipe($.size({title: 'jade_json'}));
 });
 gulp.task('jade_pre', function () {
-  delete $.cached.caches['jade'];
+  $.cached.caches['jade']={};
   return gulp.src(SRC+'/jade/**/*.jade')
     .pipe($.cached('jade_pre',['optimizeMemory']))
     .pipe($.size({title: 'jade_json'}));
@@ -64,7 +64,7 @@ gulp.task('jade', function () {
   return gulp.src([SRC+'/**/*.jade'])
     .pipe($.ignore.exclude(SRC+'/jade'))
     .pipe($.cached('jade',['optimizeMemory']))
-    .pipe($.jade())
+    .pipe($.jade({'pretty':true}))
     .pipe(gulp.dest(DIST));
 });
 
@@ -93,7 +93,7 @@ gulp.task('serve', ['build'], function () {
   gulp.watch([SRC+'/images'], ['images',reload]);
   gulp.watch([SRC+'/lib'], ['lib',reload]);
   gulp.watch([SRC+'/jade_json/**/*.json'], ['jade_json','jade',reload]);
-  gulp.watch([SRC+'/jade'], ['jade_pre','jade',reload]);
+  gulp.watch([SRC+'/jade/**/*.jade'], ['jade_pre','jade',reload]);
   gulp.watch([SRC+'/**/*.jade'], ['jade',reload]);
 });
 gulp.task('test', function () {

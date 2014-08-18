@@ -30,12 +30,17 @@ html(lang='en')
             li
               a(href='#news') News
             li
-              a(href='#links') Links
-            li
-              a(href='#involve') Get involved
+              a(href='#links') Schedule
+            li.dropdown
+              a.dropdown-toggle(href='#',data-toggle="dropdown")
+                | Get involved
+                span.caret
+              ul.dropdown-menu(role='menu')
+                li
+                  a(href='/dist/give_a_talk.html') give a talk
+                li
+                  a(href='/dist/contribute_to_github.html') use our github
           ul.nav.navbar-nav.navbar-right
-            li
-              a(href='https://github.com/scpc/problem_archive/issues') Discuss Coding
             li
               a(href='https://github.com/scpc/SCPC.github.io') View on Github
     .container
