@@ -1,11 +1,11 @@
-include jade/param.jade
+include jade_json/global.json.jade
 doctype html
 html(lang='en')
   head
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta(name='viewport', content='width=device-width, initial-scale=1')
-    title SLU Computer Programming Club
+    title #{json.fullname}
     link(rel='icon', href='images/logo_16x16.jpg')
     // Bootstrap
     link(href='lib/bootstrap/css/bootstrap.min.css', rel='stylesheet')
@@ -26,7 +26,7 @@ html(lang='en')
             span.icon-bar
           a.navbar-brand(href='#')
             img(src='images/logo.png', style='height:1em;')
-            | SLU
+            | #{json.fullname} 
         .navbar-collapse.collapse
           ul.nav.navbar-nav
             li.active
@@ -48,6 +48,7 @@ html(lang='en')
     .container
       #home
         h1 Hello, coders!
+        p= json.test
         p
           | Welcome to SLU Computer Programming Club! This is a club where everything is about coding. We have weekly meeting on 7:00 PM Tuesday in Linex Lab (Room 121L) in Ritter Hall. During the meeting, we will blah blah blah...
       hr.featurette-divider
