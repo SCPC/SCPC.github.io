@@ -1,0 +1,12 @@
+extends jade/main.jade
+block title
+  title #{json.fullname} - schedule
+block content
+  h1 Schedule
+  table.table.table-striped.table-hover
+    thead
+      include talks/header/index.jade
+    tbody
+      include talks/test/index.jade
+      include talks/test/index.jade
+      include talks/test/index.jade
