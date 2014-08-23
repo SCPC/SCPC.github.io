@@ -9,8 +9,8 @@ html(lang='en')
       title #{json.fullname}
     link(rel='icon', href='images/logo_16x16.jpg')
     // Bootstrap
-    // link(rel='stylesheet', href='/dist/lib/bootstrap/css/bootstrap.min.css')
-    link(rel='stylesheet', href='//maxcdn.bootstrapcdn.com/bootswatch/3.2.0/darkly/bootstrap.min.css')
+    link(rel='stylesheet', href='/dist/lib/bootstrap/css/bootstrap.min.css')
+    // link(rel='stylesheet', href='//maxcdn.bootstrapcdn.com/bootswatch/3.2.0/darkly/bootstrap.min.css')
     link(rel='stylesheet', href='css/main.css')
     link(rel='stylesheet', href='lib/highlightjs/github.min.css')
   body
@@ -28,7 +28,7 @@ html(lang='en')
         .navbar-collapse.collapse
           ul.nav.navbar-nav
             li
-              a(href='#home') Home
+              a(href='/dist/index.html') Home
             li
               a(href='#news') News
             li
@@ -41,7 +41,7 @@ html(lang='en')
                 li
                   a(href='/dist/give_a_talk.html') give a talk
                 li
-                  a(href='/dist/contribute_to_github.html') use our github
+                  a(href='/dist/contribute_in_github.html') use our github
           ul.nav.navbar-nav.navbar-right
             li
               a(href='https://github.com/scpc/SCPC.github.io') View on Github
@@ -49,5 +49,6 @@ html(lang='en')
       block content
     // jQuery (necessary for Bootstrap's JavaScript plugins)
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
+    script window.jQuery || document.write('<script src="/dist/lib/jquery-2.1.0.min.js"><\/script>')
     // Include all compiled plugins (below), or include individual files as needed
     script(src='lib/bootstrap/js/bootstrap.min.js')
