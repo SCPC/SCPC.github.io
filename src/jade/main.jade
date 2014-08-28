@@ -11,10 +11,10 @@ html(lang='en')
     // Bootstrap
     // link(rel='stylesheet', href='/dist/lib/bootstrap/css/bootstrap.min.css')
     link(rel='stylesheet', href='//maxcdn.bootstrapcdn.com/bootswatch/3.2.0/darkly/bootstrap.min.css')
-    link(rel='stylesheet', href='css/main.css')
+    link(rel='stylesheet', href='/dist/css/main.css')
     link(rel='stylesheet', href='lib/highlightjs/github.min.css')
   body
-    .navbar.navbar-inverse.navbar-static-top(role='navigation')
+    .navbar.navbar-default.navbar-static-top(role='navigation')
       .container-fluid
         .navbar-header
           button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
@@ -30,7 +30,7 @@ html(lang='en')
             li
               a(href='/dist/index.html') Home
             li
-              a(href='#news') News
+              a(href='/dist/index.html#news') News
             li
               a(href='/dist/schedule.html') Schedule
             li.dropdown
@@ -42,11 +42,18 @@ html(lang='en')
                   a(href='/dist/give_a_talk.html') give a talk
                 li
                   a(href='/dist/contribute_in_github.html') use our github
+            li
+              a(href='/dist/about.html') About Us
           ul.nav.navbar-nav.navbar-right
             li
               a(href='https://github.com/scpc/SCPC.github.io') View on Github
     .container
       block content
+    .footer
+      .container
+        p.text-muted
+          | Website is written by Jiaqi Li. 
+          a(href='#') Back to top
 
     // jQuery (necessary for Bootstrap's JavaScript plugins)
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
