@@ -1,0 +1,19 @@
+1; change the office list
+
+2; 
+
+3: update topic list (including manage the project)
+
+
+
+
+save change is git add --all
+make the change is git commit 
+check the history is git log
+back to the history is git checkout + id
+back to master is git checkout master
+push to git repo is git push origin
+reminder: before you go back you want to save
+if you screw up with the current master, you do checkout -f + blabla
+
+ 

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SLU Computer Programming Club</title>
+    <title>SLU Computer Programming Club - schedule</title>
     <link rel="icon" href="images/logo_16x16.jpg">
     <!-- Bootstrap-->
     <!-- link(rel='stylesheet', href='/dist/lib/bootstrap/css/bootstrap.min.css')-->
@@ -38,47 +38,32 @@
       </div>
     </div>
     <div class="container">
-      <div id="home">
-        <h1>Hello, coders!</h1>
-        <p class="lead">Welcome to SLU Computer Programming Club! This is a club where everything is about coding. We have weekly meeting on 4:00 PM Monday in Linux Lab (Room 121L) in Ritter Hall. During the meeting, we will first have a 20-min talk about useful things for coding, then people can code or talk with other people for the rest of time (usually lasts 40 min).</p>
-      </div>
-      
-      <hr class="featurette-divider">
-      <iframe id="forum_embed"
-  src="https://groups.google.com/forum/embed/?place=forum/scpc_public&theme=default
-"
-  scrolling="no"
-  frameborder="0"
-  width="900"
-  height="700">
-</iframe>
-      <div id="news">
-        <h1>News</h1>
-        <ul style="list-style-type:square">
-          <li>
-            <p>08/28/2014 The first meeting will be held on 09/08/2014 4:00 PM</p>
-          </li>
-          <li>
-            <p>08/17/2014 Official website is now online.</p>
-          </li>
-        </ul>
-      </div>
-      <hr class="featurette-divider">
-      <div id="links">
-        <h1>Useful Links:</h1>
-        <p>Advisor: <a href="http://mathcs.slu.edu/~goldwasser">Dr. Michael Goldwasser</a></p>
-        <p>Discuss Coding: <a href="https://github.com/scpc/problem_archive/issues">github issues</a></p>
-        <p>online judge: <a href="https://icpcarchive.ecs.baylor.edu/index.php">AMC-ICPC Online Archive</a></p>
-      </div>
-      <div id="involve">
-        <h1>Get Involved</h1>
-        <p class="lead">We use github for most of our activities. So please sign up for an account at <a href="//www.github.com">Github</a> first. Then make sure that your SLU email is shown somewhere in your profile.</p>
-        <p class="lead">There are several ways to get involved:</p>
-        <ul style="list-style-type:square">
-          <li>Apply to give a talk, See <a href="/dist/give_a_talk.html">guide</a>.</li>
-          <li>Use our github repos. See<a href="/dist/contribute_in_github.html">guide</a>.</li>
-        </ul>
-      </div>
+      <h1>Schedule</h1>
+      <table class="table table-striped table-hover">
+        <thead>
+          <tr>
+            <th style="width:10%">Date</th>
+            <th style="width:10%">Title</th>
+            <th style="width:10%">Speaker</th>
+            <th style="width:50%">Description</th>
+            <th style="width:10%">Status</th>
+            <th style="width:10%">Extra</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th style="width:10%">09/08/2014</th>
+            <th style="width:10%">Introduction</th>
+            <th style="width:10%">
+            </th>
+            <th style="width:50%">Introduction to this club. We will also invite everyone to play against our AI for fun.</th>
+            <th style="width:10%">Scheduled</th>
+            <th style="width:10%">
+              <p>N/A</p>
+            </th>
+          </tr>
+        </tbody>
+      </table>
     </div>
     <div class="footer">
       <div class="container">

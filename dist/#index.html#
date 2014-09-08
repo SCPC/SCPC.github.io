@@ -42,16 +42,8 @@
         <h1>Hello, coders!</h1>
         <p class="lead">Welcome to SLU Computer Programming Club! This is a club where everything is about coding. We have weekly meeting on 4:00 PM Monday in Linux Lab (Room 121L) in Ritter Hall. During the meeting, we will first have a 20-min talk about useful things for coding, then people can code or talk with other people for the rest of time (usually lasts 40 min).</p>
       </div>
-      
+      <p class="lead">The forum we have for 
       <hr class="featurette-divider">
-      <iframe id="forum_embed"
-  src="https://groups.google.com/forum/embed/?place=forum/scpc_public&theme=default
-"
-  scrolling="no"
-  frameborder="0"
-  width="900"
-  height="700">
-</iframe>
       <div id="news">
         <h1>News</h1>
         <ul style="list-style-type:square">
