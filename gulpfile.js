@@ -26,5 +26,5 @@ gulp.task('serve', [], function () {
       baseDir: ['./']
     }
   });  
-  gulp.watch(['./dist/**'], [reload]);
+  //gulp.watch(['./dist/**'], [reload]);
 });
