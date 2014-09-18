@@ -1,0 +1,7 @@
+<style>
+#talk
+{
+padding:5px;
+text_align:center;
+background-color:blue;
+}
