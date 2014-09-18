@@ -1,0 +1,5 @@
+Welcome to the SLU Computer Programming Club! This is a club where everything
+is about coding. We have <em>weekly meetings at 4:00 PM on Mondays in the Linux
+Lab</em> (Room 121L, Ritter Hall). Meetings consist of a 20-min talk and about 40
+minutes of freeform collaboration and conversation. Talks are given <em>by students</em>, and focus on <em>practical concepts and tools</em> other students might find useful in their programming practice. Talks end with some interactive demonstrations to spark discussion for the remaining meeting time.
+
