@@ -1,0 +1,15 @@
+@keyframes myfirst{
+0%   {background:red; left:0px; top:0px;}
+    25%  {background:yellow; right:200px; }
+    50%  {background:blue; left:200px; }
+    75%  {background:green; right:200px; }
+    100% {background:red; left:200px; }
+}
+
+#talk{
+animation: myfirst 5s;
+background:red;
+text_align:right;
+height:100px;
+width:400px;
+}
