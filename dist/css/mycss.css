@@ -1,23 +1,27 @@
 @keyframes myfirst{
 0%   {background:red; left:0px; top:0px;}
-    25%  {background:yellow; right:200px; }
-    50%  {background:blue; left:200px; }
-    75%  {background:green; right:200px; }
-    100% {background:red; left:200px; }
+    25%  {background:yellow; left:0px; }
+    50%  {background:blue; left:400px; }
+    75%  {background:green; left:400px; }
+    100% {background:red; left:0px; }
+    
 }
 @-webkit-keyframes myfirst {
     0%   {background:red; left:0px; top:0px;}
-    25%  {background:yellow; right:200px; }
-    50%  {background:blue; left:200px; }
-    75%  {background:green; right:200px; }
-    100% {background:red; left:200px; }
+    25%  {background:yellow; left:400px; }
+    50%  {background:blue; left:400px; }
+    75%  {background:green; left:0px; }
+    100% {background:red; left:0px; }
+    
 }
 
 #talk{
+position:relative;
 animation: myfirst 5s;
 -webkit-animation: myfirst 5s;
 background:red;
 text_align:right;
 height:100px;
 width:400px;
+
 }
